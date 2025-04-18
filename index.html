@@ -205,12 +205,74 @@
             right: auto;
             left: 15px;
         }
+
+        /* Brand Header Styles */
+        .brand-header {
+          text-align: center;
+          margin-bottom: 30px;
+          padding: 20px 0 10px;
+        }
+        
+        .logo-container {
+          display: inline-flex;
+          align-items: center;
+          gap: 15px;
+        }
+        
+        .brand-logo {
+          height: 50px; /* Adjust based on your logo aspect ratio */
+          width: auto;
+          object-fit: contain;
+        }
+        
+        .brand-name {
+          font-family: 'Montserrat', 'Arial', sans-serif;
+          font-size: 24px;
+          font-weight: 600;
+          color: #333;
+          letter-spacing: 0.5px;
+          position: relative;
+          padding-left: 15px;
+        }
+        
+        .brand-name::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 10%;
+          height: 80%;
+          width: 2px;
+          background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+          .logo-container {
+            flex-direction: column;
+            gap: 8px;
+          }
+          .brand-name {
+            font-size: 20px;
+            padding-left: 0;
+          }
+          .brand-name::before {
+            display: none;
+          }
+        }
+        .logo-container:hover {
+          transform: scale(1.02);
+          transition: transform 0.3s ease;
+        }
     </style>
 </head>
 <body>
+    <div class="brand-header">
+      <div class="logo-container">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sb900db0ad7604a83b297a51d9222905bm/624x160.png" alt="GEE Beauty & Health Logo" class="brand-logo">
+        <div class="brand-name">GEE Beauty & Health</div>
+      </div>
+    </div>
     <div class="header">
-        <!-- <img src="https://via.placeholder.com/120x60?text=Your+Logo" alt="Company Logo" class="logo"> -->
-        <center><h1>GEE Beauty & Health Store</h1></center>
         <h1 id="title">Thank You for Your Purchase!</h1>
     </div>
     
