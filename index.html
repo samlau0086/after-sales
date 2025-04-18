@@ -9,6 +9,7 @@
         html[lang="he"] {
             direction: rtl;
             text-align: right;
+            font-family: 'Arial', 'David', sans-serif;
         }
         body {
             font-family: 'Arial', sans-serif;
@@ -150,13 +151,15 @@
             <select id="lang-switcher">
                 <option value="en">English</option>
                 <option value="es">Español</option>
-                <option value="kr">한국인</option>
-                <option value="fr">Français</option>
+                <option value="ko">한국어</option>
+                <option value="lt">Lietuvių</option>
                 <option value="he">עִברִית</option>
+                <option value="ja">日本語</option>
+                <option value="fr">Français</option>
                 <option value="de">Deutsch</option>
                 <option value="pt">Português</option>
-                <option value="ja">日本語</option>
-                
+                <option value="nl">Nederlands</option>
+                <option value="cs">Čeština</option>
             </select>
         </div>
         <h1 id="title">Thank You for Your Purchase!</h1>
@@ -206,13 +209,13 @@
 
     <script>
         // 可用语言列表
-        const supportedLanguages = ['en', 'es', 'fr', 'de', 'pt', 'ja', 'zh'];
+        const supportedLanguages = ['en', 'fr', 'de', 'ko', 'pt', 'ja', 'es', 'he', 'nl', 'lt', 'cs'];
         
         // 完整语言包
         const translations = {
             en: {
                 title: "Thank You for Your Purchase!",
-                contact: "Contact us via WhatsApp",
+                contact: "I'm not happy with my order, I need help / refund of my order",
                 feedback: "We value your feedback",
                 reviewRequest: "If you're happy with our product, please consider leaving a positive review",
                 issueHelp: "If you have any issues, please contact us before leaving negative feedback",
@@ -221,76 +224,50 @@
                 contestDesc: "Thank you for your positive review! You're now eligible to enter our exclusive prize contest.",
                 contestInstruction: "Fill out the form below for a chance to win amazing prizes!",
                 contestButton: "Enter Now",
-                footer: "© 2023 Your Company Name. All rights reserved."
+                footer: "© 2025 GEE Beauty & Health. All rights reserved."
             },
-            es: {
-                title: "¡Gracias por su compra!",
-                contact: "Contáctenos por WhatsApp",
-                feedback: "Valoramos sus comentarios",
-                reviewRequest: "Si está satisfecho con nuestro producto, considere dejar una reseña positiva",
-                issueHelp: "Si tiene algún problema, contáctenos antes de dejar comentarios negativos",
-                contestToggle: "Dejé una reseña, quiero unirme al concurso de premios",
-                contestTitle: "¡Sorteo Exclusivo para Clientes Satisfechos!",
-                contestDesc: "¡Gracias por su reseña positiva! Ahora es elegible para participar en nuestro sorteo exclusivo.",
-                contestInstruction: "¡Complete el formulario a continuación para tener la oportunidad de ganar premios increíbles!",
-                contestButton: "Participar Ahora",
-                footer: "© 2023 Su Nombre de Empresa. Todos los derechos reservados."
+            fr: {
+                title: "Merci pour votre achat !",
+                contact: "Je ne suis pas satisfait(e) de ma commande, j'ai besoin d'aide / d'un remboursement",
+                feedback: "Votre avis est important pour nous",
+                reviewRequest: "Si vous êtes satisfait de notre produit, merci de laisser un avis positif",
+                issueHelp: "Si vous rencontrez des problèmes, contactez-nous avant de laisser un avis négatif",
+                contestToggle: "J'ai laissé un avis, je souhaite participer au concours",
+                contestTitle: "Concours exclusif pour clients satisfaits !",
+                contestDesc: "Merci pour votre avis positif ! Vous pouvez maintenant participer à notre concours exclusif.",
+                contestInstruction: "Remplissez le formulaire ci-dessous pour tenter de gagner des cadeaux exceptionnels !",
+                contestButton: "Participer maintenant",
+                footer: "© 2025 GEE Beauty & Health. Tous droits réservés."
             },
-            kr: {
+            de: {
+                title: "Vielen Dank für Ihren Einkauf!",
+                contact: "Ich bin mit meiner Bestellung nicht zufrieden, ich brauche Hilfe/eine Rückerstattung",
+                feedback: "Ihr Feedback ist uns wichtig",
+                reviewRequest: "Wenn Sie mit unserem Produkt zufrieden sind, hinterlassen Sie bitte eine positive Bewertung",
+                issueHelp: "Bei Problemen kontaktieren Sie uns bitte vor einer negativen Bewertung",
+                contestToggle: "Ich habe eine Bewertung abgegeben und möchte am Gewinnspiel teilnehmen",
+                contestTitle: "Exklusives Gewinnspiel für zufriedene Kunden!",
+                contestDesc: "Danke für Ihre positive Bewertung! Sie können nun an unserem exklusiven Gewinnspiel teilnehmen.",
+                contestInstruction: "Füllen Sie das Formular aus, um tolle Preise zu gewinnen!",
+                contestButton: "Jetzt teilnehmen",
+                footer: "© 2025 GEE Beauty & Health. Alle Rechte vorbehalten."
+            },
+            ko: {
                 title: "구매해 주셔서 감사합니다!",
-                contact: "WhatsApp으로 문의하기",
+                contact: "주문이 마음에 들지 않습니다. 도움이 필요합니다/환불을 원합니다",
                 feedback: "고객님의 의견은 소중합니다",
                 reviewRequest: "제품에 만족하셨다면 긍정적인 리뷰를 남겨주세요",
-                issueHelp: "문제가 있으시다면 부정적인 리뷰를 남기기 전에 저희에게 연락주세요",
+                issueHelp: "문제가 있으시면 부정적인 리뷰를 남기기 전에 저희에게 연락주세요",
                 contestToggle: "리뷰를 남겼습니다, 경품 이벤트에 참여하고 싶습니다",
                 contestTitle: "행복한 고객을 위한 특별 경품 이벤트!",
                 contestDesc: "긍정적인 리뷰를 남겨주셔서 감사합니다! 특별 경품 이벤트에 참여할 자격이 주어집니다.",
                 contestInstruction: "아래 양식을 작성하시면 멋진 상품을 얻을 기회가 주어집니다!",
                 contestButton: "지금 참여하기",
-                footer: "© 2023 귀사 이름. 모든 권리 보유."
-            },
-            he: {
-                title: "!תודה על רכישתך",
-                contact: "צור איתנו קשר בוואטסאפ",
-                feedback: "המשוב שלך חשוב לנו",
-                reviewRequest: "אם אתה מרוצה מהמוצר שלנו, אנא שקול להשאיר ביקורת חיובית",
-                issueHelp: "אם יש לך בעיות כלשהן, אנא צור איתנו קשר לפני שאתה משאיר משוב שלילי",
-                contestToggle: "השארתי ביקורת, אני רוצה להצטרף לתחרות הפרסים",
-                contestTitle: "!תחרות פרסים בלעדית עבור לקוחות מרוצים",
-                contestDesc: "!תודה על הביקורת החיובית שלך. כעת אתה זכאי להשתתף בתחרות הפרסים הבלעדית שלנו",
-                contestInstruction: "!מלא את הטופס למטה כדי לקבל הזדמנות לזכות בפרסים מדהימים",
-                contestButton: "הצטרף עכשיו",
-                footer: ".2023 © שם החברה שלך. כל הזכויות שמורות"
-            },
-            de: {
-                title: "Vielen Dank für Ihren Einkauf!",
-                contact: "Kontaktieren Sie uns via WhatsApp",
-                feedback: "Ihr Feedback ist uns wichtig",
-                reviewRequest: "Wenn Sie mit unserem Produkt zufrieden sind, hinterlassen Sie bitte eine positive Bewertung",
-                issueHelp: "Wenn Sie Probleme haben, kontaktieren Sie uns bitte, bevor Sie eine negative Bewertung abgeben",
-                contestToggle: "Ich habe eine Bewertung abgegeben und möchte am Preisausschreiben teilnehmen",
-                contestTitle: "Exklusives Preisausschreiben für zufriedene Kunden!",
-                contestDesc: "Vielen Dank für Ihre positive Bewertung! Sie sind nun berechtigt, an unserem exklusiven Preisausschreiben teilzunehmen.",
-                contestInstruction: "Füllen Sie das untenstehende Formular aus, um die Chance auf tolle Preise zu erhalten!",
-                contestButton: "Jetzt teilnehmen",
-                footer: "© 2023 Ihr Firmenname. Alle Rechte vorbehalten."
-            },
-            pt: {
-                title: "Obrigado por sua compra!",
-                contact: "Contate-nos via WhatsApp",
-                feedback: "Nós valorizamos seu feedback",
-                reviewRequest: "Se você está satisfeito com nosso produto, por favor considere deixar uma avaliação positiva",
-                issueHelp: "Se você tiver qualquer problema, por favor nos contate antes de deixar um feedback negativo",
-                contestToggle: "Deixei uma avaliação, quero participar do Concurso de Prêmios",
-                contestTitle: "Concurso Exclusivo para Clientes Satisfeitos!",
-                contestDesc: "Obrigado por sua avaliação positiva! Agora você está elegível para participar do nosso concurso exclusivo.",
-                contestInstruction: "Preencha o formulário abaixo para ter a chance de ganhar prêmios incríveis!",
-                contestButton: "Participar Agora",
-                footer: "© 2023 Nome da sua empresa. Todos os direitos reservados."
+                footer: "© 2025 GEE Beauty & Health. 모든 권리 보유."
             },
             ja: {
                 title: "ご購入ありがとうございます！",
-                contact: "WhatsAppでお問い合わせください",
+                contact: "注文に満足していません。助け/返金が必要です",
                 feedback: "お客様のフィードバックをお待ちしています",
                 reviewRequest: "製品にご満足いただけましたら、ぜひポジティブなレビューをお願いします",
                 issueHelp: "問題がございましたら、ネガティブなフィードバックを残す前にご連絡ください",
@@ -299,20 +276,85 @@
                 contestDesc: "ポジティブなレビューをありがとうございます！特別プレゼントキャンペーンにご参加いただけます。",
                 contestInstruction: "以下のフォームに記入して、素晴らしいプレゼントを当てるチャンスを得ましょう！",
                 contestButton: "今すぐ参加",
-                footer: "© 2023 あなたの会社名. 無断複写・転載を禁じます。"
+                footer: "© 2025 GEE Beauty & Health. 無断複写・転載を禁じます。"
             },
-            fr: {
-                title: "Merci pour votre achat !",
-                contact: "Contactez-nous via WhatsApp",
-                feedback: "Votre avis est important pour nous",
-                reviewRequest: "Si vous êtes satisfait de notre produit, merci de laisser un avis positif",
-                issueHelp: "Si vous rencontrez des problèmes, merci de nous contacter avant de laisser un avis négatif",
-                contestToggle: "J'ai laissé un avis, je veux participer au concours",
-                contestTitle: "Concours exclusif pour les clients satisfaits !",
-                contestDesc: "Merci pour votre avis positif ! Vous êtes maintenant éligible à participer à notre concours exclusif.",
-                contestInstruction: "Remplissez le formulaire ci-dessous pour avoir une chance de gagner des prix exceptionnels !",
-                contestButton: "Participer maintenant",
-                footer: "© 2023 Votre nom d'entreprise. Tous droits réservés."
+            es: {
+                title: "¡Gracias por su compra!",
+                contact: "No estoy satisfecho con mi pedido, necesito ayuda/reembolso",
+                feedback: "Valoramos sus comentarios",
+                reviewRequest: "Si está satisfecho con nuestro producto, considere dejar una reseña positiva",
+                issueHelp: "Si tiene problemas, contáctenos antes de dejar una reseña negativa",
+                contestToggle: "Dejé una reseña, quiero unirme al concurso de premios",
+                contestTitle: "¡Sorteo exclusivo para clientes satisfechos!",
+                contestDesc: "¡Gracias por su reseña positiva! Ahora puede participar en nuestro sorteo exclusivo.",
+                contestInstruction: "¡Complete el formulario para tener la oportunidad de ganar premios increíbles!",
+                contestButton: "Participar ahora",
+                footer: "© 2025 GEE Beauty & Health. Todos los derechos reservados."
+            },
+            pt: {
+                title: "Obrigado pela sua compra!",
+                contact: "Não estou satisfeito com meu pedido, preciso de ajuda/reembolso",
+                feedback: "Valorizamos seu feedback",
+                reviewRequest: "Se estiver satisfeito com nosso produto, considere deixar uma avaliação positiva",
+                issueHelp: "Se tiver problemas, entre em contato antes de deixar uma avaliação negativa",
+                contestToggle: "Deixei uma avaliação, quero participar do concurso",
+                contestTitle: "Concurso exclusivo para clientes satisfeitos!",
+                contestDesc: "Obrigado por sua avaliação positiva! Agora você pode participar do nosso concurso exclusivo.",
+                contestInstruction: "Preencha o formulário para concorrer a prêmios incríveis!",
+                contestButton: "Participar agora",
+                footer: "© 2025 GEE Beauty & Health. Todos os direitos reservados."
+            },
+            he: {
+                title: "!תודה על רכישתך",
+                contact: "אני לא מרוצה מההזמנה שלי, אני צריך עזרה/החזר כספי",
+                feedback: "המשוב שלך חשוב לנו",
+                reviewRequest: "אם אתה מרוצה מהמוצר שלנו, אנא שקול להשאיר ביקורת חיובית",
+                issueHelp: "אם יש לך בעיות, אנא צור איתנו קשר לפני שאתה משאיר משוב שלילי",
+                contestToggle: "השארתי ביקורת, אני רוצה להצטרף לתחרות הפרסים",
+                contestTitle: "!תחרות פרסים בלעדית עבור לקוחות מרוצים",
+                contestDesc: "!תודה על הביקורת החיובית שלך. כעת אתה יכול להשתתף בתחרות הפרסים הבלעדית שלנו",
+                contestInstruction: "!מלא את הטופס למטה כדי לקבל הזדמנות לזכות בפרסים מדהימים",
+                contestButton: "הצטרף עכשיו",
+                footer: ".2025 © GEE Beauty & Health. כל הזכויות שמורות"
+            },
+            nl: {
+                title: "Bedankt voor uw aankoop!",
+                contact: "Ik ben niet tevreden met mijn bestelling, ik heb hulp/terugbetaling nodig",
+                feedback: "We waarderen uw feedback",
+                reviewRequest: "Als u tevreden bent met ons product, overweeg dan een positieve beoordeling achter te laten",
+                issueHelp: "Neem bij problemen contact met ons op voordat u een negatieve beoordeling achterlaat",
+                contestToggle: "Ik heb een beoordeling achtergelaten en wil meedoen aan de prijsvraag",
+                contestTitle: "Exclusieve prijsvraag voor tevreden klanten!",
+                contestDesc: "Bedankt voor uw positieve beoordeling! U kunt nu deelnemen aan onze exclusieve prijsvraag.",
+                contestInstruction: "Vul het formulier in voor een kans op geweldige prijzen!",
+                contestButton: "Doe nu mee",
+                footer: "© 2025 GEE Beauty & Health. Alle rechten voorbehouden."
+            },
+            lt: {
+                title: "Dėkojame už jūsų pirkimą!",
+                contact: "Nesu patenkintas savo užsakymu, man reikia pagalbos/grąžinimo pinigų",
+                feedback: "Vertiname jūsų atsiliepimą",
+                reviewRequest: "Jei esate patenkintas mūsų produktu, prašome palikti teigiamą atsiliepimą",
+                issueHelp: "Jei turite problemų, susisiekite su mumis prieš palikdami neigiamą atsiliepimą",
+                contestToggle: "Palikau atsiliepimą, noriu dalyvauti prizų konkurse",
+                contestTitle: "Iskirtinis konkursas patenkintiems klientams!",
+                contestDesc: "Dėkojame už teigiamą atsiliepimą! Dabar galite dalyvauti mūsų išskirtiniame konkurse.",
+                contestInstruction: "Užpildykite žemiau esančią formą, kad galėtumėte laimėti nuostabius prizus!",
+                contestButton: "Dalyvauti dabar",
+                footer: "© 2025 GEE Beauty & Health. Visos teisės saugomos."
+            },
+            cs: {
+                title: "Děkujeme za váš nákup!",
+                contact: "Nejsem spokojen(a) se svou objednávkou, potřebuji pomoc/vrácení peněz",
+                feedback: "Vaše zpětná vazba je pro nás důležitá",
+                reviewRequest: "Pokud jste spokojeni s naším produktem, zvažte zanechání pozitivní recenze",
+                issueHelp: "Pokud máte problémy, kontaktujte nás před zanecháním negativní recenze",
+                contestToggle: "Zanechal(a) jsem recenzi, chci se zúčastnit soutěže o ceny",
+                contestTitle: "Exkluzivní soutěž pro spokojené zákazníky!",
+                contestDesc: "Děkujeme za vaši pozitivní recenzi! Nyní se můžete zúčastnit naší exkluzivní soutěže.",
+                contestInstruction: "Vyplňte níže uvedený formulář a získejte šanci na skvělé ceny!",
+                contestButton: "Zúčastnit se nyní",
+                footer: "© 2025 GEE Beauty & Health. Všechna práva vyhrazena."
             }
         };
         
