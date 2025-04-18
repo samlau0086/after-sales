@@ -6,6 +6,10 @@
     <title>Customer Support</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        html[lang="he"] {
+            direction: rtl;
+            text-align: right;
+        }
         body {
             font-family: 'Arial', sans-serif;
             max-width: 600px;
@@ -140,16 +144,19 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://via.placeholder.com/120x60?text=Your+Logo" alt="Company Logo" class="logo">
+        <!-- <img src="https://via.placeholder.com/120x60?text=Your+Logo" alt="Company Logo" class="logo"> -->
+        <center><h1>GEE Beauty & Health Store</h1></center>
         <div class="language-switcher">
             <select id="lang-switcher">
                 <option value="en">English</option>
                 <option value="es">Español</option>
+                <option value="kr">한국인</option>
                 <option value="fr">Français</option>
+                <option value="he">עִברִית</option>
                 <option value="de">Deutsch</option>
                 <option value="pt">Português</option>
                 <option value="ja">日本語</option>
-                <option value="zh">中文</option>
+                
             </select>
         </div>
         <h1 id="title">Thank You for Your Purchase!</h1>
@@ -190,7 +197,7 @@
         <h3 id="contest-title">Exclusive Prize Contest for Happy Customers!</h3>
         <p id="contest-desc">Thank you for your positive review! You're now eligible to enter our exclusive prize contest.</p>
         <p id="contest-instruction">Fill out the form below for a chance to win amazing prizes!</p>
-        <a href="#" class="contest-button" id="contest-button">Enter Now</a>
+        <a href="https://forms.gle/6kaMU7s65Q1KKPiY9" class="contest-button" id="contest-button">Enter Now</a>
     </div>
     
     <div class="footer">
@@ -229,7 +236,84 @@
                 contestButton: "Participar Ahora",
                 footer: "© 2023 Su Nombre de Empresa. Todos los derechos reservados."
             },
-            // 其他语言翻译...
+            kr: {
+                title: "구매해 주셔서 감사합니다!",
+                contact: "WhatsApp으로 문의하기",
+                feedback: "고객님의 의견은 소중합니다",
+                reviewRequest: "제품에 만족하셨다면 긍정적인 리뷰를 남겨주세요",
+                issueHelp: "문제가 있으시다면 부정적인 리뷰를 남기기 전에 저희에게 연락주세요",
+                contestToggle: "리뷰를 남겼습니다, 경품 이벤트에 참여하고 싶습니다",
+                contestTitle: "행복한 고객을 위한 특별 경품 이벤트!",
+                contestDesc: "긍정적인 리뷰를 남겨주셔서 감사합니다! 특별 경품 이벤트에 참여할 자격이 주어집니다.",
+                contestInstruction: "아래 양식을 작성하시면 멋진 상품을 얻을 기회가 주어집니다!",
+                contestButton: "지금 참여하기",
+                footer: "© 2023 귀사 이름. 모든 권리 보유."
+            },
+            he: {
+                title: "!תודה על רכישתך",
+                contact: "צור איתנו קשר בוואטסאפ",
+                feedback: "המשוב שלך חשוב לנו",
+                reviewRequest: "אם אתה מרוצה מהמוצר שלנו, אנא שקול להשאיר ביקורת חיובית",
+                issueHelp: "אם יש לך בעיות כלשהן, אנא צור איתנו קשר לפני שאתה משאיר משוב שלילי",
+                contestToggle: "השארתי ביקורת, אני רוצה להצטרף לתחרות הפרסים",
+                contestTitle: "!תחרות פרסים בלעדית עבור לקוחות מרוצים",
+                contestDesc: "!תודה על הביקורת החיובית שלך. כעת אתה זכאי להשתתף בתחרות הפרסים הבלעדית שלנו",
+                contestInstruction: "!מלא את הטופס למטה כדי לקבל הזדמנות לזכות בפרסים מדהימים",
+                contestButton: "הצטרף עכשיו",
+                footer: ".2023 © שם החברה שלך. כל הזכויות שמורות"
+            },
+            de: {
+                title: "Vielen Dank für Ihren Einkauf!",
+                contact: "Kontaktieren Sie uns via WhatsApp",
+                feedback: "Ihr Feedback ist uns wichtig",
+                reviewRequest: "Wenn Sie mit unserem Produkt zufrieden sind, hinterlassen Sie bitte eine positive Bewertung",
+                issueHelp: "Wenn Sie Probleme haben, kontaktieren Sie uns bitte, bevor Sie eine negative Bewertung abgeben",
+                contestToggle: "Ich habe eine Bewertung abgegeben und möchte am Preisausschreiben teilnehmen",
+                contestTitle: "Exklusives Preisausschreiben für zufriedene Kunden!",
+                contestDesc: "Vielen Dank für Ihre positive Bewertung! Sie sind nun berechtigt, an unserem exklusiven Preisausschreiben teilzunehmen.",
+                contestInstruction: "Füllen Sie das untenstehende Formular aus, um die Chance auf tolle Preise zu erhalten!",
+                contestButton: "Jetzt teilnehmen",
+                footer: "© 2023 Ihr Firmenname. Alle Rechte vorbehalten."
+            },
+            pt: {
+                title: "Obrigado por sua compra!",
+                contact: "Contate-nos via WhatsApp",
+                feedback: "Nós valorizamos seu feedback",
+                reviewRequest: "Se você está satisfeito com nosso produto, por favor considere deixar uma avaliação positiva",
+                issueHelp: "Se você tiver qualquer problema, por favor nos contate antes de deixar um feedback negativo",
+                contestToggle: "Deixei uma avaliação, quero participar do Concurso de Prêmios",
+                contestTitle: "Concurso Exclusivo para Clientes Satisfeitos!",
+                contestDesc: "Obrigado por sua avaliação positiva! Agora você está elegível para participar do nosso concurso exclusivo.",
+                contestInstruction: "Preencha o formulário abaixo para ter a chance de ganhar prêmios incríveis!",
+                contestButton: "Participar Agora",
+                footer: "© 2023 Nome da sua empresa. Todos os direitos reservados."
+            },
+            ja: {
+                title: "ご購入ありがとうございます！",
+                contact: "WhatsAppでお問い合わせください",
+                feedback: "お客様のフィードバックをお待ちしています",
+                reviewRequest: "製品にご満足いただけましたら、ぜひポジティブなレビューをお願いします",
+                issueHelp: "問題がございましたら、ネガティブなフィードバックを残す前にご連絡ください",
+                contestToggle: "レビューを書きました、プレゼントキャンペーンに参加したいです",
+                contestTitle: "幸せなお客様のための特別プレゼントキャンペーン！",
+                contestDesc: "ポジティブなレビューをありがとうございます！特別プレゼントキャンペーンにご参加いただけます。",
+                contestInstruction: "以下のフォームに記入して、素晴らしいプレゼントを当てるチャンスを得ましょう！",
+                contestButton: "今すぐ参加",
+                footer: "© 2023 あなたの会社名. 無断複写・転載を禁じます。"
+            },
+            fr: {
+                title: "Merci pour votre achat !",
+                contact: "Contactez-nous via WhatsApp",
+                feedback: "Votre avis est important pour nous",
+                reviewRequest: "Si vous êtes satisfait de notre produit, merci de laisser un avis positif",
+                issueHelp: "Si vous rencontrez des problèmes, merci de nous contacter avant de laisser un avis négatif",
+                contestToggle: "J'ai laissé un avis, je veux participer au concours",
+                contestTitle: "Concours exclusif pour les clients satisfaits !",
+                contestDesc: "Merci pour votre avis positif ! Vous êtes maintenant éligible à participer à notre concours exclusif.",
+                contestInstruction: "Remplissez le formulaire ci-dessous pour avoir une chance de gagner des prix exceptionnels !",
+                contestButton: "Participer maintenant",
+                footer: "© 2023 Votre nom d'entreprise. Tous droits réservés."
+            }
         };
         
         // 检测浏览器语言
